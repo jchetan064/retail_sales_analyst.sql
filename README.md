@@ -4,7 +4,7 @@
 
 **Project Title**: Retail Sales Analysis  
 **Level**: Beginner  
-**Database**: `sql_practice`
+**Database**: `retail_sales_analyst`
 
 This project is designed to demonstrate SQL skills and techniques typically used by data analysts to explore, clean, and analyze retail sales data. The project involves setting up a retail sales database, performing exploratory data analysis (EDA), and answering specific business questions through SQL queries. This project is ideal for those who are starting their journey in data analysis and want to build a solid foundation in SQL.
 
@@ -19,11 +19,11 @@ This project is designed to demonstrate SQL skills and techniques typically used
 
 ### 1. Database Setup
 
-- **Database Creation**: The project starts by creating a database named `sql_practice`.
+- **Database Creation**: The project starts by creating a database named `retail_sales_analyst`.
 - **Table Creation**: A table named `retail_sales` is created to store the sales data. The table structure includes columns for transaction ID, sale date, sale time, customer ID, gender, age, product category, quantity sold, price per unit, cost of goods sold (COGS), and total sale amount.
 
 ```sql
-CREATE DATABASE sql_practice;
+CREATE DATABASE retail_sales_analyst;
 
 CREATE TABLE retail_sales
 (
@@ -83,7 +83,7 @@ select category, sum(quantity) as total_quantity
 from retail_sales
 where
     category = 'Clothing'
-    and quantity > 10
+    and quantity > 4
     and DATEDIFF('2022-11-01', '2022-11-30')
     -- and sale_date between '2022-11-01' and '2022-11-30'
 group by
